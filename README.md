@@ -29,6 +29,7 @@ std::cout << ustr1.substr(2, 3).toString();
 ### Split
 ```
 std::string csv = "a,あ,b,c,い,う";
+std::string delimiter = ",";
 UTF8String ucsv  = csv;
 
 std::vector<UTF8String> v = ucsv.split(delimiter);
