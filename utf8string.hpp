@@ -111,6 +111,15 @@ public:
     return newStr;    
   }
 
+  UTF8String operator+(UTF8String str){
+    char *concatStr = (char *)malloc(strlen(originalStr) + strlen(str.toString().c_str()));
+    strcat(concatStr, originalStr);
+    strcat(concatStr, str.toString().c_str());
+    UTF8String concatUStr = concatStr;
+    free(concatStr);
+    return concatStr;
+  }
+
   UTF8String operator=(std::string str){
     UTF8String newStr(str);
     return newStr;

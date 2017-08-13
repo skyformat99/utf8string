@@ -40,3 +40,17 @@ for(std::vector<UTF8String>::iterator it = v.begin(); it != v.end(); it++){
 }
 
 ```
+
+### + operator
+Simply connects two UTF8String strings.
+```
+  std::string a = "abcあ";
+  std::string b = "defい";
+  UTF8String ua = a;
+  UTF8String ub = b;
+
+  UTF8String concatStr = a + b;
+  // this should put out "abcあdefい"
+  std::cout << concatStr.toString() << '\n';
+  
+```

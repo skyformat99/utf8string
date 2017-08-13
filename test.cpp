@@ -27,4 +27,13 @@ int main(int argc, char **argv){
   for(std::vector<UTF8String>::iterator it = v.begin(); it != v.end(); it++){
     std::cout << it->toString() << '\n';
   }
+
+
+  std::string a = "abcあ";
+  std::string b = "defい";
+  UTF8String ua = a;
+  UTF8String ub = b;
+
+  UTF8String concat = a + b;
+  std::cout << concat.toString() << '\n';
 }
