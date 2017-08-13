@@ -8,8 +8,6 @@ class UTF8String {
 private:
   char *originalStr;
 
-  char **splitterdArray;
-
 public:
   
   UTF8String(std::string str){
