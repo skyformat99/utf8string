@@ -1,8 +1,8 @@
 # utf8string
 A class to deal with UTF8 strings.
-By ncluding ut8string.hpp, you can manipulate utf8 strings.
-You cand do operations like:
-- obtain portion of a string (substring)
-- split a string with a delimiter and generate std::vector
+By ncluding ut8string.hpp, you can manipulate utf8 string, enabling it to:
+- obtain a part of the string (substring)
+- split the string with a delimiter and generate std::vector
+- count the number of the letters in the string (not the byte-count length)
 
 ## 
