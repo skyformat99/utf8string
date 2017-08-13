@@ -5,4 +5,37 @@ Only by including utf8string.hpp, you can manipulate utf8 string, enabling it to
 - split the string with a delimiter and generate std::vector
 - count the number of letters in the string (not the byte-count length)
 
-## 
+## Usage
+### To initialize
+You can instanciate the UTF8String class either with std::string or C string(char *).
+```
+std::string str = "abcあいうdef";
+char cstr[100];
+strcpy(cstr, str.c_str);
+
+UTF8String ustr1 = str;
+UTF8String ustr2 = cstr;
+```
+Or you can initialize it with an ordinary constructor.
+```
+UTF8String ustr3(str);
+```
+
+### Substring
+```
+// this should put out "cあい"
+std::cout << ustr1.substr(2, 3).toString();
+```
+### Split
+```
+std::string csv = "a,あ,b,c,い,う";
+UTF8String ucsv  = csv;
+
+std::vector<UTF8String> v = ucsv.split(delimiter);
+
+// this should list up the each element delimited with comma
+for(std::vector<UTF8String>::iterator it = v.begin(); it != v.end(); it++){
+  std::cout << it->toString() << '\n';
+}
+
+```
