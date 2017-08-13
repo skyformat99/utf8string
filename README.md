@@ -6,6 +6,8 @@ Only by including utf8string.hpp, you can manipulate utf8 string, enabling it to
 - count the number of letters in the string (not the byte-count length)
 
 ## Usage
+Include "utf8string.hpp" to your program.
+
 ### To initialize
 You can instantiate the UTF8String either with std::string or C string(char *).
 ```
