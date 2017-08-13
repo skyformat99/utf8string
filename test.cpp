@@ -3,29 +3,28 @@
 #include <vector>
 
 int main(int argc, char **argv){
-  char *p;
-  int pos = strtol(argv[2], &p, 10);
-  int len = strtol(argv[3], &p, 10);
+  // original string 1 - std::string
+  std::string str1 = "abcあいうdeえお";
+  // original string 2 - C string
+  char str2[50];
+  strcpy(str2, str1.c_str());
 
-  UTF8String str = "a,あ,b,い\0";
-  //std::cout << str.substr(2,3).substr(1,1).toString().c_str() << '\n';
-  UTF8String str2 = str;
+  // initialize from std::string
+  UTF8String ustr1 = str1;
+  // initialize from C string
+  UTF8String ustr2 = str2;
+  
+  // get substring and convert to std::string
+  std::cout << ustr1.substr(2,5).toString() << '\n';
 
-  std::vector<UTF8String> v = str2.split(",");
-  std::cout << "size=" << v.size() << '\n';
+  // split string and generate vector
+  std::string csv = "a,あ,b,c,い,う";
+  std::string delimiter = ",";
+  UTF8String ustr3 = csv;
+  
+  std::vector<UTF8String> v = ustr3.split(delimiter);
 
-  for(std::vector<UTF8String>::iterator it = v.begin(); it != v.end(); ++it) {
+  for(std::vector<UTF8String>::iterator it = v.begin(); it != v.end(); it++){
     std::cout << it->toString() << '\n';
-
   }
-
-  std::vector<UTF8String> v2 = str2.split("");
-  std::cout << "size=" << v2.size() << '\n';
-
-  for(std::vector<UTF8String>::iterator it = v2.begin(); it != v2.end(); ++it) {
-    std::cout << it->toString() << '\n';
-
-  }
-
-
 }
