@@ -7,7 +7,7 @@ Only by including utf8string.hpp, you can manipulate utf8 string, enabling it to
 
 ## Usage
 ### To initialize
-You can instanciate the UTF8String class either with std::string or C string(char *).
+You can instantiate the UTF8String either with std::string or C string(char *).
 ```
 std::string str = "abcあいうdef";
 char cstr[100];
@@ -23,7 +23,7 @@ UTF8String ustr3(str);
 
 ### Substring
 ```
-// this should put out "cあい"
+// this should put out "cあい" ( .toString() needed to pass it to cout as a std::string)
 std::cout << ustr1.substr(2, 3).toString();
 ```
 ### Split
