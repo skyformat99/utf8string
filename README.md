@@ -51,7 +51,7 @@ Simply connects two UTF8String strings.
   UTF8String ua = a;
   UTF8String ub = b;
 
-  UTF8String concatStr = a + b;
+  UTF8String concatStr = ua + ub;
   // this should put out "abcあdefい"
   std::cout << concatStr.toString() << '\n';
   

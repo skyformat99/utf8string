@@ -34,6 +34,6 @@ int main(int argc, char **argv){
   UTF8String ua = a;
   UTF8String ub = b;
 
-  UTF8String concat = a + b;
+  UTF8String concat = ua + ub;
   std::cout << concat.toString() << '\n';
 }
