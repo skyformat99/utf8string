@@ -56,3 +56,9 @@ Simply connects two UTF8String strings.
   std::cout << concatStr.toString() << '\n';
   
 ```
+
+### Length (letter count)
+```
+UTF8String str = "aあbcあ";
+int len = str.utf8length();  // len shoud be 5
+```
